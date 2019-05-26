@@ -1,2 +1,2 @@
-# iOS-self-study
+# iOS Self Study
 Learning iOS dev
