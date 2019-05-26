@@ -84,6 +84,25 @@ else {
     print ("Fuck off")
 }
 
+// Display first 20 numbers in the 7 times table
+var i = 1
+while (i <= 20) {
+    print (i * 7)
+    i += 1
+}
+
+// Create an array containing 8, 7, 19, 20 and halve all elements
+var myArray = [8, 7, 19, 20]
+for (index, _) in myArray.enumerated() {
+    myArray[index] /= 2
+}
+print(myArray)
+
+
+
+
+
+
 
 
 
