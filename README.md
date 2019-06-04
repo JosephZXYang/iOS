@@ -1,2 +1,2 @@
 # iOS Self Study
-Learning iOS dev
+Learning iOS development
