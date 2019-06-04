@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-BoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Is_It_Prime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Prime?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWr-6Z-Yyp">
+                                <rect key="frame" x="100.5" y="50" width="119" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.61477339319272839" green="0.28318204457452767" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input a positive number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dn-Jd-DpM">
+                                <rect key="frame" x="75" y="105.5" width="170.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please give a number..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fXj-fh-5Wn">
+                                <rect key="frame" x="75" y="163" width="170" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-M7-qhd">
+                                <rect key="frame" x="131" y="223.5" width="58" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qor-Nt-PVa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the button to submit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXx-3K-WCE">
+                                <rect key="frame" x="61" y="328.5" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uXx-3K-WCE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0h8-uh-P60"/>
+                            <constraint firstItem="2dn-Jd-DpM" firstAttribute="top" secondItem="UWr-6Z-Yyp" secondAttribute="bottom" constant="29" id="1hK-a7-zVD"/>
+                            <constraint firstItem="2dn-Jd-DpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ag-eg-X3L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uXx-3K-WCE" secondAttribute="bottom" constant="131" id="3Ek-1d-NEL"/>
+                            <constraint firstItem="uXx-3K-WCE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3nQ-lE-3CD"/>
+                            <constraint firstItem="fXj-fh-5Wn" firstAttribute="top" secondItem="2dn-Jd-DpM" secondAttribute="bottom" constant="38" id="9Bi-kY-wbY"/>
+                            <constraint firstItem="6Mc-M7-qhd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSY-4a-LVT"/>
+                            <constraint firstItem="6Mc-M7-qhd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gm4-qV-EmC"/>
+                            <constraint firstItem="6Mc-M7-qhd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5t-JT-80F"/>
+                            <constraint firstItem="fXj-fh-5Wn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bo4-vj-LOo"/>
+                            <constraint firstItem="uXx-3K-WCE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kTP-rY-fYe"/>
+                            <constraint firstItem="UWr-6Z-Yyp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="n0W-Yk-ais"/>
+                            <constraint firstItem="UWr-6Z-Yyp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="okM-oc-ymH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="uXx-3K-WCE" id="9gz-wQ-deA"/>
+                        <outlet property="userInputText" destination="fXj-fh-5Wn" id="YGL-o2-ifO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99.375" y="117.5"/>
+        </scene>
+    </scenes>
+</document>
