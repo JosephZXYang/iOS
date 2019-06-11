@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Phone_Number" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-90-kVk">
+                                <rect key="frame" x="100.5" y="63" width="174.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your phone number here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-Qb-obr">
+                                <rect key="frame" x="111" y="223" width="193" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5u-vB-EpT">
+                                <rect key="frame" x="31" y="223" width="70" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your phone number is:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-Se-mbb">
+                                <rect key="frame" x="101.5" y="333" width="172" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No record yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igb-pr-geZ">
+                                <rect key="frame" x="115" y="396" width="145.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-wY-kdn">
+                                <rect key="frame" x="315" y="223" width="37" height="30"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1g-uh-wHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Uz-Qb-obr" firstAttribute="leading" secondItem="o5u-vB-EpT" secondAttribute="trailing" constant="9.5" id="4B4-KH-vDR"/>
+                            <constraint firstItem="chZ-Se-mbb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6rc-3N-2tW"/>
+                            <constraint firstItem="9Uz-Qb-obr" firstAttribute="top" secondItem="yRy-90-kVk" secondAttribute="bottom" constant="127.5" id="8ZW-kS-1gc"/>
+                            <constraint firstItem="chZ-Se-mbb" firstAttribute="top" secondItem="9Uz-Qb-obr" secondAttribute="bottom" constant="80" id="Ddm-sO-DWI"/>
+                            <constraint firstItem="Igb-pr-geZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FOm-qn-3iz"/>
+                            <constraint firstItem="o5u-vB-EpT" firstAttribute="top" secondItem="yRy-90-kVk" secondAttribute="bottom" constant="127.5" id="JTG-HE-2qH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NLg-wY-kdn" secondAttribute="trailing" constant="23" id="Rvu-q9-cWH"/>
+                            <constraint firstItem="NLg-wY-kdn" firstAttribute="leading" secondItem="9Uz-Qb-obr" secondAttribute="trailing" constant="11" id="Uxd-bS-Ayh"/>
+                            <constraint firstItem="NLg-wY-kdn" firstAttribute="top" secondItem="yRy-90-kVk" secondAttribute="bottom" constant="127.5" id="WbB-nH-2yG"/>
+                            <constraint firstItem="yRy-90-kVk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acD-La-rh2"/>
+                            <constraint firstItem="o5u-vB-EpT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="vQi-GZ-R6F"/>
+                            <constraint firstItem="yRy-90-kVk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="xvs-yx-hBU"/>
+                            <constraint firstItem="Igb-pr-geZ" firstAttribute="top" secondItem="chZ-Se-mbb" secondAttribute="bottom" constant="42.5" id="zDq-gA-84d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberInput" destination="9Uz-Qb-obr" id="neJ-KY-ldl"/>
+                        <outlet property="numberLabel" destination="Igb-pr-geZ" id="BIo-Ux-Mla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
