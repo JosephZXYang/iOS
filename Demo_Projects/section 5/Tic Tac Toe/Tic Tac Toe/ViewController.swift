@@ -33,6 +33,7 @@ class ViewController: UIViewController {
             button.isEnabled = true
             button.imageView?.alpha = 0
             button.isHidden = false
+            button.setImage(nil, for: [])
         }
         playAgainButton.isHidden = true
         winningMessage.isHidden = true
@@ -54,9 +55,10 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
         let index = sender.tag - 1
-        if boardState[index] == 0{
+        if boardState[index] == 0 {
             boardState[index] = currentPlayer
             currentPlayer = -currentPlayer
+            
             if boardState[index] == 1 {
                 sender.setImage(UIImage(named: "circle.png"), for: [])
             }
@@ -88,6 +90,21 @@ class ViewController: UIViewController {
                 winningMessage.isHidden = false
                 playAgainButton.isHidden = false
             }
+            if !gameOver {
+                var b = true
+                for i in boardState {
+                    b = b && (i != 0)
+                }
+                if b == true {
+                    winningMessage.text = "Draw!"
+                    winningMessage.isHidden = false
+                    playAgainButton.isHidden = false
+                    for button in buttons {
+                        button.isEnabled = false
+                        gameOver = true
+                    }
+                }
+            }
         }
     }
     
@@ -101,6 +118,8 @@ class ViewController: UIViewController {
         
         for button in buttons {
             button.imageView?.alpha = 0
+            button.isHighlighted = false
+            button.setImage(nil, for: [])
         }
         winningMessage.isHidden = true
         playAgainButton.isHidden = true
